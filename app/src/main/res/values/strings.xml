@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Task9.1P: Lost and Found Map Mobile APP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="API_KEY">AIzaSyAy-fB-qxuN9VmtwZQbrcVDE0zgiu-pcRk</string>
+    <string name="AdvertTypeLost">Lost</string>
+    <string name="AdvertTypeFound">Found</string>
+</resources>

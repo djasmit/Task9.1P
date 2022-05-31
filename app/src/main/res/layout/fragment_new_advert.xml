@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.task91p.NewAdvertFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/locateTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Location:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+                app:layout_constraintStart_toStartOf="@+id/editTextDate"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                app:layout_constraintVertical_bias="0.050000012" />
+
+            <fragment
+                android:id="@+id/autocomplete_fragment"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/getLocationButton"
+                app:layout_constraintEnd_toStartOf="@+id/getLocationButton"
+                app:layout_constraintStart_toStartOf="@+id/locationTextView"
+                app:layout_constraintTop_toTopOf="@+id/getLocationButton" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/descEditText"
+                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintStart_toStartOf="@+id/descEditText"
+                app:layout_constraintTop_toBottomOf="@+id/descEditText"
+                app:layout_constraintVertical_bias="0.050000012" />
+
+            <TextView
+                android:id="@+id/descTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/phoneEditText"
+                app:layout_constraintStart_toStartOf="@+id/phoneEditText"
+                app:layout_constraintTop_toBottomOf="@+id/phoneEditText"
+                app:layout_constraintVertical_bias="0.050000012" />
+
+            <EditText
+                android:id="@+id/descEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Description"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/descTextView"
+                app:layout_constraintStart_toStartOf="@+id/descTextView"
+                app:layout_constraintTop_toBottomOf="@+id/descTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/typeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Post Type:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <RadioGroup
+                android:id="@+id/typeRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/typeTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/typeTextView"
+                app:layout_constraintTop_toTopOf="@+id/typeTextView">
+
+                <RadioButton
+                    android:id="@+id/lostRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="Lost"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/foundRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:text="Found"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Name:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.100000024" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/nameTextView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/nameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/phoneTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Phone:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+                app:layout_constraintStart_toStartOf="@+id/nameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/nameEditText"
+                app:layout_constraintVertical_bias="0.050000012" />
+
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/phoneTextView"
+                app:layout_constraintStart_toStartOf="@+id/phoneTextView"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Date"
+                android:inputType="date"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/dateTextView"
+                app:layout_constraintStart_toStartOf="@+id/dateTextView"
+                app:layout_constraintTop_toBottomOf="@+id/dateTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/autocomplete_fragment" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/locateTextView"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/locateTextView"
+                app:layout_constraintTop_toBottomOf="@+id/locateTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/getLocationButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Get Location"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/locationTextView"
+                app:layout_constraintStart_toEndOf="@+id/autocomplete_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/locationTextView"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
